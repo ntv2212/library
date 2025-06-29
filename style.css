@@ -119,15 +119,20 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .book-card{
     border: 1px solid #ccc;
     border-radius: 0.5rem;
     padding: 1rem;
-    margin-bottom: 1rem;
-    max-width: 25rem;
+    width: 20%;
     font-size: 2rem;
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .book-title {
@@ -137,4 +142,25 @@ main {
 
 .book-list p {
     margin-bottom: 1rem;
+    word-break: break-word;
+}
+
+.book-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.book-des{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 9;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

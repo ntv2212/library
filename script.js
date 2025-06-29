@@ -61,14 +61,18 @@ function displayAllBook() {
     bookItem.className = "book-card";
     bookItem.id = book.id;
     bookItem.innerHTML = `
-        <h3 class="book-title">${book.title}</h3>
-        <p>Author: ${book.author}</p>
-        <p>Pages: ${book.pages}</p>
-        <p>Description: ${book.des}</p>
-        <button class="delete-book-btn btn btn-danger">Delete book</button>
-        <button class="btn toggle-read-btn">${
-          book.read ? "Mark as Unread" : "Mark as Read"
-        }</button>
+        <div>
+          <h3 class="book-title truncate">${book.title}</h3>
+          <p class="truncate">Author: ${book.author}</p>
+          <p class="truncate">Pages: ${book.pages}</p>
+          <p class="book-des">Description: ${book.des}</p>
+        </div>
+        <div class="book-actions">
+          <button class="delete-book-btn btn btn-danger">Delete book</button>
+          <button class="btn toggle-read-btn">${
+            book.read ? "Mark as Unread" : "Mark as Read"
+          }</button>
+        </div>
       `;
 
     const deleteBtn = bookItem.querySelector(".delete-book-btn");
