@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="app-name">Library</h1>
+      <p class="app-des">This is nOne's FE book library app</p>
+
+      <div class="book-list-container">
+        <h2 class="book-list-title">Book list</h2>
+        <div id="book-list" class="book-list"></div>
+      </div>
+
+      <button id="add-new-book" class="btn btn-primary">New book</button>
+
+      <dialog id="new-book-dialog" class="new-book-dialog">
+        <h1 class="dialog-title">Add new book</h1>
+        <form method="dialog" id="form-add-new-book">
+          <div class="form-item">
+            <label for="title" class="form-item-label">Title:</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div class="form-item">
+            <label for="author" class="form-item-label">Author:</label>
+            <input type="text" id="author" name="author" required />
+          </div>
+          <div class="form-item">
+            <label for="pages" class="form-item-label">Pages:</label>
+            <input type="number" min="0" id="pages" name="pages" required />
+          </div>
+          <div class="form-item">
+            <label for="read" class="form-item-label">Read:</label>
+            <input type="checkbox" id="read" name="read" />
+          </div>
+          <div class="form-item">
+            <label for="des" class="form-item-label">Description:</label>
+            <textarea id="des" name="des"></textarea>
+          </div>
+          <div class="dialog-actions">
+            <button type="submit" class="btn btn-primary">Add book</button>
+            <button type="reset" class="btn">Reset</button>
+            <button
+              type="button"
+              id="close-new-book-diaglog"
+              class="btn btn-danger"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+  </body>
+  <script src="./script.js" type="module"></script>
+</html>
